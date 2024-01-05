@@ -12,7 +12,6 @@ export default function ProductDetail() {
     let productService = new ProductService();
     productService.getById(id).then((result) => setProduct(result.data.data));
   }, []);
-
   return (
     <div>
       <Card.Group>

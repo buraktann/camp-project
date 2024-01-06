@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Button, FormField, Label } from "semantic-ui-react";
+import BtTextInput from "../utilities/customFormControls/BtTextInput";
 
 export default function ProductAdd() {
   const initialValues = { productName: "", unitPrice: 0 };
@@ -20,7 +21,9 @@ export default function ProductAdd() {
         }}
       >
         <Form className="ui form">
-          <FormField>
+            <BtTextInput name="productName" placeholder="Ürün Adı" />
+            <BtTextInput name="unitPrice" placeholder="Ürün Fiyatı" />
+          {/* <FormField>
             <Field name="productName" placeholder="Ürün Adı"></Field>
             <ErrorMessage
               name="productName"
@@ -28,8 +31,8 @@ export default function ProductAdd() {
                 <Label pointing basic color="red" content={error}></Label>
               )}
             ></ErrorMessage>
-          </FormField>
-          <FormField>
+          </FormField> */}
+          {/* <FormField>
             <Field name="unitPrice" placeholder="Ürün Fiyatı"></Field>
             <ErrorMessage
               name="unitPrice"
@@ -37,7 +40,7 @@ export default function ProductAdd() {
                 <Label pointing basic color="red" content={error}></Label>
               )}
             ></ErrorMessage>
-          </FormField>
+          </FormField> */}
           <Button color="green" type="submit">
             Ekle
           </Button>
